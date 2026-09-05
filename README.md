@@ -12,23 +12,41 @@ drop one row below the baseline. All five cuts share that matrix and those metri
 Round and Block are distinct dot arrangements, Round sparser than Regular and Block denser, while
 Display and Grid Display carry Regular's exact glyphs, respaced to set flush. 97 glyphs per cut.
 
----
+![Le Dot, five cuts](cuts.png)
 
-## The cuts
+## Download
 
-| Cut | Sidebearing | Word space | Notes |
-| --- | --- | --- | --- |
-| **Le Dot** | 1 circle | 2 columns | The text cut. Start here. |
-| **Le Dot Round** | 1 circle | 2 columns | Sparser arrangement — 566 dots against Regular's 607. Lighter on the page. |
-| **Le Dot Block** | 1 circle | 2 columns | Densest arrangement — 648 dots. Heaviest on the page. |
-| **Le Dot Display** | none | 1 column | Regular's glyphs, set flush for large sizes. Letters butt dot to dot. |
-| **Le Dot Grid Display** | none | 1 column | Display, plus every unlit cell of the matrix printed at 20%. |
+### [↓ Download all five cuts (.zip)](https://github.com/dyyle02/Le-Dot/archive/refs/heads/main.zip)
 
-97 glyphs each: uppercase, lowercase, figures, and punctuation.
+Unzip, then double-click each `.ttf` to install. Or grab one cut on its own:
+
+| Cut | | |
+| --- | --- | --- |
+| **Le Dot** | the text cut, start here | [download](https://github.com/dyyle02/Le-Dot/raw/main/LeDot-Regular.ttf) |
+| **Le Dot Round** | sparser, lighter on the page | [download](https://github.com/dyyle02/Le-Dot/raw/main/LeDotRound-Regular.ttf) |
+| **Le Dot Block** | denser, heaviest on the page | [download](https://github.com/dyyle02/Le-Dot/raw/main/LeDotBlock-Regular.ttf) |
+| **Le Dot Display** | flush setting, for large sizes | [download](https://github.com/dyyle02/Le-Dot/raw/main/LeDotDisplay-Regular.ttf) |
+| **Le Dot Grid Display** | flush, with the 20% matrix printed | [download](https://github.com/dyyle02/Le-Dot/raw/main/LeDotGridDisplay-Regular.ttf) |
+
+## Character set
+
+97 glyphs per cut: uppercase, lowercase, figures, and punctuation.
+
+![Le Dot character set](charset.png)
+
+## Le Dot Grid Display
+
+![Le Dot Grid Display](grid-display.png)
+
+Grid Display is a **two-color font** (`COLR`/`CPAL`): the 20% grid is part of each glyph, not a
+layer you composite yourself. Lit dots take the text color; unlit dots print at 20% of black. It
+works anywhere `COLR` is supported, which is every current browser plus Figma, Illustrator and
+Keynote. Renderers that ignore `COLR` fall back to the plain letterforms, so it degrades safely
+rather than breaking.
 
 ## Metrics
 
-Drawn on a 250-unit grid at 1000 units per em, so one dot = ¼ em and one row = ¼ em.
+One dot = ¼ em, one row = ¼ em.
 
 - **Cap box** — 4 rows (1 em)
 - **Descender** — 1 row below the baseline
@@ -38,23 +56,12 @@ Drawn on a 250-unit grid at 1000 units per em, so one dot = ¼ em and one row = 
 Set leading explicitly. "Auto" is usually close, but Figma and Adobe sometimes pad it, which breaks
 the grid alignment between lines.
 
-## Le Dot Grid Display
-
-Grid Display is a **two-color font** (`COLR`/`CPAL`): the 20% grid is part of each glyph, not a
-layer you composite yourself. Lit dots take the text color; unlit dots print at 20% of black. It
-works anywhere `COLR` is supported — every current browser, Figma, Illustrator, Keynote. Renderers
-that ignore `COLR` fall back to the plain letterforms, which degrades safely rather than breaking.
-
-## Install
-
-**Desktop** — double-click any `.ttf` in `fonts/`, or drop it into your system font folder.
-
-**Web**
+## Use on the web
 
 ```css
 @font-face {
   font-family: "Le Dot";
-  src: url("fonts/LeDot-Regular.ttf") format("truetype");
+  src: url("LeDot-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
@@ -66,12 +73,11 @@ h1 {
 
 ## Specimen
 
-`index.html` is a self-contained specimen — open it locally or serve it from GitHub Pages
-(Settings → Pages → deploy from branch root). It has a live tester, a size waterfall, the full
-character set, and a before/after record of the symbol redraws.
+`index.html` is a self-contained specimen with a live tester, a size waterfall, the full character
+set, and a before/after record of the symbol redraws. Open it locally, or turn on GitHub Pages
+(Settings → Pages → deploy from `main` / root) to put it online.
 
 ## License
 
 [SIL Open Font License 1.1](LICENSE) with **Le Dot** as a Reserved Font Name. Free to use, embed and
-sell with your work; derivatives must stay under the OFL and ship under a different name. Swap this
-out if you'd rather license it differently — nothing in the fonts depends on it.
+sell with your work; derivatives must stay under the OFL and ship under a different name.
