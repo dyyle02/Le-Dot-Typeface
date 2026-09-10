@@ -39,7 +39,7 @@ Display and Grid Display carry **no sidebearing at all**. Letters butt straight 
 dot to dot, with nothing between them. That is deliberate, not an oversight: it hands the spacing
 back to you instead of the font deciding it. The space character becomes your unit of measure. One
 space puts exactly one circle between two letters, two spaces put two, and none leaves them fused
-into a continuous block. In the specimen above, every cut is set plainly except Grid Display, which uses a space between each
+into a continuous block. In the specimen above, every cut is set plainly except Grid Display, which uses one space between every
 letter plus a leading and trailing one, so the matrix runs a column past the word on each side.
 
 Regular, Round and Block already include that circle, so adding spaces there opens the gap to two
