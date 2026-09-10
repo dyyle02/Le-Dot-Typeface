@@ -30,6 +30,21 @@ Unzip, then double-click each `.ttf` to install. Or grab one cut on its own:
 | **Le Dot Grid Display** | flush, with the 20% matrix printed | [download](https://github.com/dyyle02/Le-Dot/raw/main/LeDotGridDisplay-Regular.ttf) |
 | **Le Dot Grid Backdrop** | the matrix on its own, for Figma | [download](https://github.com/dyyle02/Le-Dot/raw/main/LeDotGridBackdrop-Regular.ttf) |
 
+## Spacing
+
+Regular, Round and Block carry a one-circle sidebearing on the right of every glyph, so words space
+themselves: type normally and letters sit one circle apart.
+
+Display and Grid Display carry **no sidebearing at all**. Letters butt straight against each other,
+dot to dot, with nothing between them. That is deliberate, not an oversight: it hands the spacing
+back to you instead of the font deciding it. The space character becomes your unit of measure. One
+space puts exactly one circle between two letters, two spaces put two, and none leaves them fused
+into a continuous block. Every specimen above is set with a single space between letters; for Grid
+Display, a leading and trailing space extends the matrix one column past the word on each side.
+
+Regular, Round and Block already include that circle, so adding spaces there widens the gap to two
+circles or more.
+
 ## Character set
 
 97 glyphs per cut: uppercase, lowercase, figures, and punctuation.
